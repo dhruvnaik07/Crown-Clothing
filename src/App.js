@@ -11,6 +11,7 @@ import {setCurrentUser} from './Redux/User/useractions.js';
 import {selectCurrentUser} from './Redux/User/userselectors.js';
 import {createStructuredSelector} from 'reselect';
 import CheckoutPage from './Pages/Checkout/checkout.jsx';
+import Styled from 'styled-components';
 
 class App extends React.Component {
 
@@ -70,7 +71,7 @@ class App extends React.Component {
 
 const mapStateToPros = createStructuredSelector({
 
-  currentUser: selectCurrentUser  
+  currentUser: selectCurrentUser,
 })
 
 const mapDispatchToProps = dispatch => ({
