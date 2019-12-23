@@ -1,8 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {ReactComponent as Logo} from '../../Assets/crown.svg';
-import './header.scss';
 import {auth} from '../../Firebase/firebase.utils.js';
 import CartDropdown from '../CartDropdown/cartdropdown.jsx';
 import CartIcon from '../CartIcon/carticon.jsx';
@@ -25,7 +23,7 @@ const Header = ({currentUser, hidden}) => (
 			<OptionLink to="/shop">CONTACT</OptionLink>
 			{
 				currentUser ?
-				<OptionLink as='div' onClick={() => auth.signOut()}>SIGN OUT</OptionLink> :
+				<OptionLink to='/' as='div' onClick={() => auth.signOut()}>SIGN OUT</OptionLink> :
 				<OptionLink to='/signin'>SIGN IN</OptionLink>
 			}
 

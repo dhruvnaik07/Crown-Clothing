@@ -12,7 +12,7 @@ const CollectionPage = ({collections}) => {
 
 		<div className='collection-page'>
 
-			<h2 className='title'>{title}</h2>
+			<h2 className='title'>{title.toUpperCase()}</h2>
 
 			<div className='items'>
 			{
